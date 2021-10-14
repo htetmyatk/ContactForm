@@ -1,0 +1,151 @@
+body {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+.container-details {
+  width: 50%;
+}
+.contact-form {
+  padding: 20px;
+  background-color: #e5e5e5;
+  border-top: 3px solid #7879f1;
+}
+.contact-form-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+  color: #7879f1;
+}
+.contact-form-label {
+  height: 21px;
+}
+#errorMsg {
+  font-size: 8px;
+  color: #df2020;
+}
+#name-1,
+#name-2,
+#phone {
+  width: 40%;
+  background-color: #fff;
+  padding: 0 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7879f1;
+  border-radius: 5px;
+}
+.contact-form-need {
+  display: inline-block;
+  position: absolute;
+  padding: 2px 12px;
+  line-height: 1.5rem;
+  margin-left: 30px;
+  border-radius: 3px;
+  background-color: #df2020;
+  color: #ffffff;
+  text-align: center;
+}
+#gender-1,
+#gender-2 {
+  display: inline;
+  vertical-align: middle;
+}
+[type="radio"].with-gap:checked + span:after {
+  background-color: #7879f1;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #7879f1;
+}
+#address-1,
+#address-2 {
+  vertical-align: middle;
+  width: 20%;
+  background-color: #fff;
+  padding: 0 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7879f1;
+  border-radius: 5px;
+}
+#address-text {
+  height: auto;
+  width: 100%;
+  border: 2px solid #7879f1;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#mail,
+#retype-mail,
+#level {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.1rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7879f1;
+  border-radius: 5px;
+}
+#checked-mail,
+#phone-length,
+#valid-mail,
+#phone-valid {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid red;
+  background-color: #ffe5e5;
+  color: red;
+  font-weight: bold;
+}
+#contact_type {
+  background-color: #fff;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7879f1;
+  border-radius: 5px;
+}
+#contact-content {
+  height: auto;
+  background-color: #fff;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #7879f1;
+  border-radius: 5px;
+}
+.student {
+  padding: 0px;
+  color: #000000;
+}
+.send-button {
+  width: 80%;
+  margin: auto;
+  display: block;
+  font-weight: bold;
+  padding: 12px 32px;
+  line-height: 1.5rem;
+  color: #ffffff;
+  background-color: #7879f1;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .container-details {
+    width: 100%;
+  }
+  .contact-form-need {
+    margin-left: 4px;
+  }
+  #name-1,
+  #name-2 {
+    width: 40%;
+    margin-top: 10px;
+  }
+  #phone {
+    width: 100%;
+  }
+}

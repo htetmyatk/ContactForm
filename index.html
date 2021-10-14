@@ -12,304 +12,174 @@
 
 <body>
   <div class="container container-details">
-    <div class="contact-form">
-      <form>
-        <div id="contact-data-input">
-          <h1 class="contact-form-title">お問い合わせフォーム</h1>
+    <div class="contact"></div>
+    <form action="#" id="contact_form" name="contact_form" method="post">
+      <div id="contact-data-input">
+        <h1 class="contact-form-title">お問い合わせフォーム</h1>
 
-          <!--For Name｜ここから-->
-          <div class="row">
-            <div class="col s12 m5 " id="contact-form-label">
-              お名前
-              <span class="contact-form-need">必須</span>
-            </div>
-            <div class="col s12 m7">
-              <input type="text" name="name-1" id="name-1" placeholder="First Name" required>
-              <input type="text" name="name-2" id="name-2" placeholder="Last Name" required>
-            </div>
+        <!--For Name｜ここから-->
+        <div class="row">
+          <div class="col s12 m5 " id="contact-form-label">
+            お名前
+            <span class="contact-form-need">必須</span>
           </div>
-          <!--For Name｜ここまで-->
-
-
-          <!--For Gender｜ここから-->
-          <div class="row">
-            <div class="col s5 m5 14 contact-form-label">
-              性別
-            </div>
-            <div class="col s5 m7 18">
-
-              <label>
-                <input type="radio" class="with-gap" name="gender" id="gender-1" checked />
-                <span>男性</span>
-              </label>
-
-
-              <label>
-                <input type="radio" class="with-gap" name="gender" id="gender-2">
-                <span>女性</span>
-              </label>
-
-            </div>
+          <div class="col s12 m7">
+            <input type="text" name="name-1" id="name-1" placeholder="First Name" required>
+            <input type="text" name="name-2" id="name-2" placeholder="Last Name" required>
           </div>
-          <!--For Name｜ここまで-->
+        </div>
+        <!--For Name｜ここまで-->
 
-          <!--For Address｜ここから-->
-          <div class="row">
-            <div class="col s5 m5 14 contact-form-label">
-              ご住所
-            </div>
-            <div class="col s7 m7 18">
 
-              <span>〒</span>
-              <input type="number" name="address" id="address-1" placeholder="001">
-
-              <span>ー</span>
-              <input type="number" name="address" id="address-2" placeholder="001">
-              <br>
-
-              <textarea name="address-text" id="address-text" cols="30" rows="2"></textarea>
-            </div>
+        <!--For Gender｜ここから-->
+        <div class="row">
+          <div class="col s5 m5 14 contact-form-label">
+            性別
           </div>
-          <!--For Address｜ここまで-->
+          <div class="col s5 m7 18">
 
-          <!--For Phone｜ここから-->
-          <div class="row">
-            <div class="col s5 m5 contact-form-label">
-              電話番号
-              <span class="contact-form-need">必須</span>
-            </div>
-            <div class="col s7 m7 18">
-              <input type="number" name="phone" id="phone" placeholder="097777799" required>
-              <span id="phone-length" style="display: none;">お電話番号が9文字です。</span>
-            </div>
-          </div>
-          <!--For Phone｜ここまで-->
-
-          <!--For Mail｜ここから-->
-          <div class="row">
-            <div class="col s5 m5 contact-form-label">
-              メール
-              <span class="contact-form-need">必須</span>
-            </div>
-            <div class="col s7 m7 18">
-              <input type="email" id="mail" placeholder="contact@mail.com" required>
-              <span id="valid-mail" style="display: none;">Mail is not valid</span>
-            </div>
-          </div>
-          <!--For Phone｜ここまで-->
-
-          <div class="row">
-            <div class="col s5 m5 contact-form-label">
-              確認メール
-            </div>
-            <div class="col s5 m7 18">
-              <input type="email" id="retype-mail" placeholder="contact@mail.com" required><br>
-              <span id="checked-mail" style="display: none;">メールアドレスと同じアドレスを入力してください</span>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col s12 m5 contact-form-label">
-              お問い合わせ種類
-            </div>
-            <div class="col s12 m7 18 input-field select-required">
-              <select name="お問い合わせの種類" id="contact_type" onchange="ShowHideDiv()" class="browser-default">
-                <option value="" disabled selected>ご選択ください</option>
-                <option value="勉強会について" id="contactypevalue">勉強会について</option>
-                <option value="レギュラー用の事種提出" id="contactypevalue">レギュラー用の事種提出</option>
-                <option value="新しいクラスの情報" id="contactypevalue">新しいクラスの情報</option>
-                <option value="個人プロジェクトの窓口" id="contactypevalue">個人プロジェクトの窓口</option>
-                <option value="定別ミーティングの欠席に関する連絡" id="contactypevalue">定別ミーティングの欠席に関する連絡</option>
-                <option value="そぞれのご意見" id="contactypevalue">そぞれのご意見</option>
-              </select>
-            </div>
-          </div>
-
-
-          <div class="row" id="level-box" style="display: none;">
-            <div class="col s12 m5 contact-form-label">
-              レベルと資格
-              <span class="contact-form-need">必須</span>
-            </div>
-            <div class="col s12 m7 18">
-              <input type="text" id="level-text">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m5 contact-form-label">
-              お問い合わせ内容
-            </div>
-            <div class="col s12 m7 18 input-field required">
-              <textarea name="contact-conten" id="contact-content" rows="6"
-                placeholder="こちらにお問合せ内容をご入力ください。"></textarea>
-            </div>
-          </div>
-          <div>
             <label>
-              <input id="student" type="checkbox" />
-              <span class="student">学生の時はこちらをチェックする</span>
+              <input type="radio" class="with-gap" name="gender" id="gender-1" checked />
+              <span>男性</span>
+            </label>
+
+
+            <label>
+              <input type="radio" class="with-gap" name="gender" id="gender-2">
+              <span>女性</span>
             </label>
 
           </div>
-          <div>
-            <button type="submit" onclick="myFunction()" class="send-button">上記に同意してお問い合わせを送信する</button>
+        </div>
+        <!--For Name｜ここまで-->
+
+        <!--For Address｜ここから-->
+        <div class="row">
+          <div class="col s5 m5 14 contact-form-label">
+            ご住所
+          </div>
+          <div class="col s7 m7 18">
+
+            <span>〒</span>
+            <input type="number" name="address" id="address-1" placeholder="001">
+
+            <span>ー</span>
+            <input type="number" name="address" id="address-2" placeholder="001">
+            <br>
+
+            <textarea name="address-text" id="address-text" cols="30" rows="2"></textarea>
           </div>
         </div>
-      </form>
+        <!--For Address｜ここまで-->
 
-      <div id="contact-data-output" style="display: none;">
-        <h1 class="contact-form-title">送信されたお問い合わせフォームデータ！</h1>
-        <div class="contact-form-label">お名前:<span id="output-name"></span></div><br>
-        <div class="contact-form-label">性別：<span id="output-gender"></span></div><br>
-        <div class="contact-form-label">ご住所：<span id="output-address"></span></div><br>
-        <div class="contact-form-label">電話番号：<span id="output-phone"></span></div><br>
-        <div class="contact-form-label">メール：<span id="output-mail"></span></div><br>
-        <div class="contact-form-label">確認メール：<span id="output-retypemail"></span></div><br>
-        <div class="contact-form-label">お問い合わせ種類：<span id="output-contact-type"></span></div><br>
-        <div id="output-level-wrap" style="display: none;">
-          <div class="contact-form-label">レベルと資格：<span id="output-level"></span></div><br>
+        <!--For Phone｜ここから-->
+        <div class="row">
+          <div class="col s5 m5 contact-form-label">
+            電話番号
+            <span class="contact-form-need">必須</span>
+          </div>
+          <div class="col s7 m7 18">
+            <input type="number" name="phone" id="phone" placeholder="097777799" required>
+            <span id="phone-length" style="display: none;">お電話番号が9文字です。</span>
+          </div>
         </div>
-        <div class="contact-form-label">お問い合わせ内容：<span id="output-contact-contact"></span></div><br>
-        <div class="contact-form-label">学生：<span id="output-student"></span></div><br>
-      </div>
+        <!--For Phone｜ここまで-->
 
+        <!--For Mail｜ここから-->
+        <div class="row">
+          <div class="col s5 m5 contact-form-label">
+            メール
+            <span class="contact-form-need">必須</span>
+          </div>
+          <div class="col s7 m7 18">
+            <input type="email" id="mail" placeholder="contact@mail.com" required>
+            <span id="valid-mail" style="display: none;">Mail is not valid</span>
+          </div>
+        </div>
+        <!--For Phone｜ここまで-->
+
+        <div class="row">
+          <div class="col s5 m5 contact-form-label">
+            確認メール
+          </div>
+          <div class="col s5 m7 18">
+            <input type="email" id="confirm_email" placeholder="contact@mail.com" required><br>
+            <span id="checked-mail" style="display: none;">メールアドレスと同じアドレスを入力してください</span>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col s12 m5 contact-form-label">
+            お問い合わせ種類
+          </div>
+          <div class="col s12 m7 18 input-field select-required">
+            <select name="お問い合わせの種類" id="contact_type" onchange="ShowHideDiv()" class="browser-default">
+              <option value="" disabled selected>ご選択ください</option>
+              <option value="勉強会について" id="contactypevalue">勉強会について</option>
+              <option value="レギュラー用の事種提出" id="contactypevalue">レギュラー用の事種提出</option>
+              <option value="新しいクラスの情報" id="contactypevalue">新しいクラスの情報</option>
+              <option value="個人プロジェクトの窓口" id="contactypevalue">個人プロジェクトの窓口</option>
+              <option value="定別ミーティングの欠席に関する連絡" id="contactypevalue">定別ミーティングの欠席に関する連絡</option>
+              <option value="そぞれのご意見" id="contactypevalue">そぞれのご意見</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="row" id="level-box" style="display: none;">
+          <div class="col s12 m5 contact-form-label">
+            レベルと資格
+            <span class="contact-form-need">必須</span>
+          </div>
+          <div class="col s12 m7 18">
+            <input type="text" id="level-text">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m5 contact-form-label">
+            お問い合わせ内容
+          </div>
+          <div class="col s12 m7 18 input-field required">
+            <textarea name="contact-conten" id="contact-content" rows="6" placeholder="こちらにお問合せ内容をご入力ください。"></textarea>
+          </div>
+        </div>
+        <div>
+          <label>
+            <input id="student" type="checkbox" />
+            <span class="student">学生の時はこちらをチェックする</span>
+          </label>
+
+        </div>
+        <div>
+          <button type="submit" class="contact-btn hide-on-small-only mt-5 mb-5"
+            value="上記に同意してお問合せを送信する">上記に同意してお問合せを送信する</button>
+          <button type="submit" class="contact-btn hide-on-med-and-up mt-5 mb-5" value="お問合せを送信する">お問合せを送信する</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="contact-data-output" style="display: none;">
+      <h1 class="contact-form-title">送信されたお問い合わせフォームデータ！</h1>
+      <div class="contact-form-label">お名前:<span id="output-name"></span></div><br>
+      <div class="contact-form-label">性別：<span id="output-gender"></span></div><br>
+      <div class="contact-form-label">ご住所：<span id="output-address"></span></div><br>
+      <div class="contact-form-label">電話番号：<span id="output-phone"></span></div><br>
+      <div class="contact-form-label">メール：<span id="output-mail"></span></div><br>
+      <div class="contact-form-label">確認メール：<span id="output-confirm_email"></span></div><br>
+      <div class="contact-form-label">お問い合わせ種類：<span id="output-contact-type"></span></div><br>
+      <div id="output-level-wrap" style="display: none;">
+        <div class="contact-form-label">レベルと資格：<span id="output-level"></span></div><br>
+      </div>
+      <div class="contact-form-label">お問い合わせ内容：<span id="output-contact-content"></span></div><br>
+      <div class="contact-form-label">学生：<span id="output-student"></span></div><br>
     </div>
 
+
+
   </div>
-  <script>
-    //Phone Number Validation
-    var phone = document.getElementById("phone");
-    var phoneFormact = /^\d{11}$/g;
-    phone.onkeyup = function () {
-      if (phone.value.match(phoneFormact)) {
-        document.getElementById("phone-length").style.display = "none";
-      } else {
-        document.getElementById("phone-length").style.display = "block";
-      }
-    }
-
-    //Mail Validation 
-    var mail = document.getElementById("mail");
-    var mailFormact = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
-
-    mail.onkeyup = function () {
-      if (mail.value.match(mailFormact)) {
-        document.getElementById("valid-mail").style.display = "none";
-      } else {
-        document.getElementById("valid-mail").style.display = "block";
-      }
-    }
-
-    var retypemail = document.getElementById("retype-mail");
-    var checkedmail = document.getElementById("checked-mail");
-
-    retypemail.onkeyup = function () {
-      if (mail.value !== retypemail.value) {
-        checkedmail.style.display = "block";
-      } else if (mail.value == retypemail.value) {
-        checkedmail.style.display = "none";
-      }
-    }
-
-    //ShowHide Function
-    function ShowHideDiv() {
-      var selectedValue = document.getElementById("contact_type").value;
-      var Level_box = document.getElementById("level-box");
-      if (selectedValue == "新しいクラスの情報") {
-        Level_box.style.display = "block";
-      } else {
-        Level_box.style.display = "none";
-      }
-    }
-
-    //Submit Function
-    function myFunction() {
-      var First_name = document.getElementById("name-1").value;
-      var Last_name = document.getElementById("name-2").value;
-      var Male = document.getElementById("gender-1");
-      var Female = document.getElementById("gender-2");
-      var address1 = document.getElementById("address-1").value;
-      var address2 = document.getElementById("address-2").value;
-      var addresstext = document.getElementById("address-text").value;
-      var phone = document.getElementById("phone").value;
-      var mail = document.getElementById("mail").value;
-      var retypemail = document.getElementById("retype-mail").value;
-      var checkedmail = document.getElementById("checked-mail");
-      var selectedValue = document.getElementById("contact_type").value;
-      var Level_text = document.getElementById("level-text").value;
-      var Contact_contetnt = document.getElementById("contact-content").value;
-      var Student = document.getElementById("student");
-      var Contact_data_input = document.getElementById("contact-data-input");
-      var Contact_data_output = document.getElementById("contact-data-output");
-
-      //Condation For Name
-      if (First_name, Last_name === "") {
-        alert("お名前を入れてください。");
-        return false;
-      } else {
-        document.getElementById("output-name").innerHTML = First_name + " " + Last_name;
-      }
-
-      //Condation For Gender And Output Gender
-      if (Male.checked == true) {
-        document.getElementById("output-gender").innerHTML = "男性";
-      } else {
-        document.getElementById("output-gender").innerHTML = "女性";
-      }
-
-      //Condation Fro Phone
-      if (phone === "") {
-        alert("電話番号を入れてください。");
-        return false;
-      } else {
-        document.getElementById("output-phone").innerHTML = phone;
-      }
-
-      //Condation For Mail
-      if (mail === "") {
-        alert("メールアドレスを入れてください。")
-        return false;
-      } else {
-        document.getElementById("output-mail").innerHTML = mail;
-        document.getElementById("output-retypemail").innerHTML = retypemail;
-      }
-
-      //Condation For Level
-      if (selectedValue == "新しいクラスの情報" && Level_text === "") {
-        Level_text.setAttribute("required", "");
-        alert("レベルと資格を入れてください。");
-        return false;
-      } else if (selectedValue != "新しいクラスの情報") {
-        console.log("test")
-        document.getElementById("output-level-wrap").style.display = "none";
-      } else {
-        document.getElementById("output-level-wrap").style.display = "block";
-        document.getElementById("output-level").innerHTML = Level_text;
-      }
-
-
-      //Condation For Student and Output Student
-      if (Student.checked === true) {
-        document.getElementById("output-student").innerHTML = "true";
-      } else {
-        document.getElementById("output-student").innerHTML = "false";
-      }
-
-      //Output Fro All Data
-
-      document.getElementById("output-address").innerHTML = address1 + address2 + addresstext;
-      document.getElementById("output-contact-type").innerHTML = selectedValue;
-      document.getElementById("output-contact-contact").innerHTML = Contact_contetnt;
-
-      //Condation Contact_data
-      if (Contact_data_output.style.display === "none") {
-        Contact_data_output.style.display = "block";
-        Contact_data_input.style.display = "none"
-      }
-    }
-  </script>
+  <script type="text/javascript" src="contact.js"></script>
 </body>
 
 </html>

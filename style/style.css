@@ -8,7 +8,7 @@ body {
 .container-details {
   width: 50%;
 }
-.contact-form {
+#contact_form {
   padding: 20px;
   background-color: #e5e5e5;
   border-top: 3px solid #7879f1;
@@ -82,7 +82,7 @@ body {
   border-radius: 5px;
 }
 #mail,
-#retype-mail,
+#confirm_email,
 #level-text {
   width: 100%;
   background-color: #fff;
@@ -121,7 +121,7 @@ body {
   padding: 0px;
   color: #000000;
 }
-.send-button {
+.contact-btn {
   width: 80%;
   margin: auto;
   display: block;

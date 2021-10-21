@@ -6,7 +6,7 @@ body {
   line-height: 18px;
 }
 .container-details {
-  width: 50%;
+  width: 40%;
 }
 #contact_form {
   padding: 20px;
@@ -39,12 +39,15 @@ body {
   border: 2px solid #7879f1;
   border-radius: 5px;
 }
+#phone {
+  width: 50%;
+}
 .contact-form-need {
   display: inline-block;
-  position: absolute;
+
   padding: 2px 12px;
   line-height: 1.5rem;
-  margin-left: 30px;
+  float: right;
   border-radius: 3px;
   background-color: #df2020;
   color: #ffffff;
@@ -64,6 +67,10 @@ body {
 [type="radio"].with-gap:checked + span:after {
   border: 2px solid #7879f1;
 }
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+  border: 2px solid #7879f1;
+}
+
 #address-1,
 #address-2 {
   vertical-align: middle;
@@ -84,7 +91,7 @@ body {
 #mail,
 #confirm_email,
 #level-text {
-  width: 100%;
+  width: 50%;
   background-color: #fff;
   padding: 0.1rem 0.75rem;
   margin-bottom: 1rem;
@@ -147,5 +154,14 @@ body {
   }
   #phone {
     width: 100%;
+  }
+  #mail,
+  #confirm_email,
+  #level-text {
+    width: 100%;
+  }
+  #address-1,
+  #address-2 {
+    width: 25%;
   }
 }

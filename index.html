@@ -19,11 +19,11 @@
 
         <!--For Name｜ここから-->
         <div class="row">
-          <div class="col s12 m5 " id="contact-form-label">
+          <div class="col s12 m4 " id="contact-form-label">
             お名前
             <span class="contact-form-need">必須</span>
           </div>
-          <div class="col s12 m7">
+          <div class="col s12 m8">
             <input type="text" name="name-1" id="name-1" placeholder="First Name" required>
             <input type="text" name="name-2" id="name-2" placeholder="Last Name" required>
           </div>
@@ -33,10 +33,10 @@
 
         <!--For Gender｜ここから-->
         <div class="row">
-          <div class="col s5 m5 14 contact-form-label">
+          <div class="col s5 m4 14 contact-form-label">
             性別
           </div>
-          <div class="col s5 m7 18">
+          <div class="col s5 m8 18">
 
             <label>
               <input type="radio" class="with-gap" name="gender" id="gender-1" checked />
@@ -55,30 +55,32 @@
 
         <!--For Address｜ここから-->
         <div class="row">
-          <div class="col s5 m5 14 contact-form-label">
+          <div class="col s5 m4 14 contact-form-label">
             ご住所
           </div>
-          <div class="col s7 m7 18">
-
+          <div class="col s7 m8 18">
             <span>〒</span>
             <input type="number" name="address" id="address-1" placeholder="001">
-
             <span>ー</span>
             <input type="number" name="address" id="address-2" placeholder="001">
             <br>
 
-            <textarea name="address-text" id="address-text" cols="30" rows="2"></textarea>
+            <textarea name="address-text" class="hide-on-small-only" id="address-text" cols="30" rows="2"></textarea>
+          </div>
+          <div class="col 12 m12 hide-on-med-and-up">
+            <textarea name="address-text" class="hide-on-small-only" id="address-text" cols="30" rows="2"></textarea>
           </div>
         </div>
+
         <!--For Address｜ここまで-->
 
         <!--For Phone｜ここから-->
         <div class="row">
-          <div class="col s5 m5 contact-form-label">
+          <div class="col s5 m4 contact-form-label">
             電話番号
             <span class="contact-form-need">必須</span>
           </div>
-          <div class="col s7 m7 18">
+          <div class="col s7 m8 18">
             <input type="number" name="phone" id="phone" placeholder="097777799" required>
             <span id="phone-length" style="display: none;">お電話番号が9文字です。</span>
           </div>
@@ -87,11 +89,11 @@
 
         <!--For Mail｜ここから-->
         <div class="row">
-          <div class="col s5 m5 contact-form-label">
+          <div class="col s5 m4 contact-form-label">
             メール
             <span class="contact-form-need">必須</span>
           </div>
-          <div class="col s7 m7 18">
+          <div class="col s7 m8 18">
             <input type="email" id="mail" placeholder="contact@mail.com" required>
             <span id="valid-mail" style="display: none;">Mail is not valid</span>
           </div>
@@ -99,10 +101,10 @@
         <!--For Phone｜ここまで-->
 
         <div class="row">
-          <div class="col s5 m5 contact-form-label">
+          <div class="col s5 m4 contact-form-label">
             確認メール
           </div>
-          <div class="col s5 m7 18">
+          <div class="col s5 m8 18">
             <input type="email" id="confirm_email" placeholder="contact@mail.com" required><br>
             <span id="checked-mail" style="display: none;">メールアドレスと同じアドレスを入力してください</span>
           </div>
@@ -110,10 +112,10 @@
 
 
         <div class="row">
-          <div class="col s12 m5 contact-form-label">
+          <div class="col s12 m4 contact-form-label">
             お問い合わせ種類
           </div>
-          <div class="col s12 m7 18 input-field select-required">
+          <div class="col s12 m8 18 input-field select-required">
             <select name="お問い合わせの種類" id="contact_type" onchange="ShowHideDiv()" class="browser-default">
               <option value="" disabled selected>ご選択ください</option>
               <option value="勉強会について" id="contactypevalue">勉強会について</option>
@@ -128,26 +130,26 @@
 
 
         <div class="row" id="level-box" style="display: none;">
-          <div class="col s12 m5 contact-form-label">
+          <div class="col s12 m4 contact-form-label">
             レベルと資格
             <span class="contact-form-need">必須</span>
           </div>
-          <div class="col s12 m7 18">
+          <div class="col s12 m8 18">
             <input type="text" id="level-text">
           </div>
         </div>
 
         <div class="row">
-          <div class="col s12 m5 contact-form-label">
+          <div class="col s12 m4 contact-form-label">
             お問い合わせ内容
           </div>
-          <div class="col s12 m7 18 input-field required">
+          <div class="col s12 m8 18 input-field required">
             <textarea name="contact-conten" id="contact-content" rows="6" placeholder="こちらにお問合せ内容をご入力ください。"></textarea>
           </div>
         </div>
-        <div>
+        <div class="row mb-5">
           <label>
-            <input id="student" type="checkbox" />
+            <input id="student" class="filled-in" type="checkbox" />
             <span class="student">学生の時はこちらをチェックする</span>
           </label>
 
@@ -158,25 +160,25 @@
           <button type="submit" class="contact-btn hide-on-med-and-up mt-5 mb-5" value="お問合せを送信する">お問合せを送信する</button>
         </div>
       </div>
-    </form>
 
-    <div id="contact-data-output" style="display: none;">
-      <h1 class="contact-form-title">送信されたお問い合わせフォームデータ！</h1>
-      <div class="contact-form-label">お名前:<span id="output-name"></span></div><br>
-      <div class="contact-form-label">性別：<span id="output-gender"></span></div><br>
-      <div class="contact-form-label">ご住所：<span id="output-address"></span></div><br>
-      <div class="contact-form-label">電話番号：<span id="output-phone"></span></div><br>
-      <div class="contact-form-label">メール：<span id="output-mail"></span></div><br>
-      <div class="contact-form-label">確認メール：<span id="output-confirm_email"></span></div><br>
-      <div class="contact-form-label">お問い合わせ種類：<span id="output-contact-type"></span></div><br>
-      <div id="output-level-wrap" style="display: none;">
-        <div class="contact-form-label">レベルと資格：<span id="output-level"></span></div><br>
+
+      <div id="contact-data-output" style="display: none;">
+        <h1 class="contact-form-title">送信されたお問い合わせフォームデータ！</h1>
+        <div class="contact-form-label">お名前:<span id="output-name"></span></div><br>
+        <div class="contact-form-label">性別：<span id="output-gender"></span></div><br>
+        <div class="contact-form-label">ご住所：<span id="output-address"></span></div><br>
+        <div class="contact-form-label">電話番号：<span id="output-phone"></span></div><br>
+        <div class="contact-form-label">メール：<span id="output-mail"></span></div><br>
+        <div class="contact-form-label">確認メール：<span id="output-confirm_email"></span></div><br>
+        <div class="contact-form-label">お問い合わせ種類：<span id="output-contact-type"></span></div><br>
+        <div id="output-level-wrap" style="display: none;">
+          <div class="contact-form-label">レベルと資格：<span id="output-level"></span></div><br>
+        </div>
+        <div class="contact-form-label">お問い合わせ内容：<span id="output-contact-content"></span></div><br>
+        <div class="contact-form-label">学生：<span id="output-student"></span></div><br>
       </div>
-      <div class="contact-form-label">お問い合わせ内容：<span id="output-contact-content"></span></div><br>
-      <div class="contact-form-label">学生：<span id="output-student"></span></div><br>
-    </div>
 
-
+    </form>
 
   </div>
   <script type="text/javascript" src="contact.js"></script>
